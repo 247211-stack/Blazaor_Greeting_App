@@ -1,0 +1,123 @@
+﻿
+@page "/greeting"
+@rendermode InteractiveServer
+
+<div class="main-bg">
+
+    <div class="card-container">
+
+        <div class="top-icon">💜</div>
+
+        <h1>Welcome</h1>
+
+        <p class="desc">
+            Enter your name and receive a beautiful greeting ✨
+        </p>
+
+        <input type="text"
+               placeholder="Type your name here..."
+               @bind="UserName" />
+
+        <div class="result-box">
+            <h2>Hello, @UserName 🌸</h2>
+        </div>
+
+    </div>
+
+</div>
+
+@code {
+    string UserName = "";
+}
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .main-bg {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #0f172a, #1e293b, #312e81, #4c1d95);
+    }
+
+    .card-container {
+        width: 430px;
+        padding: 45px;
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255,255,255,0.15);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+        text-align: center;
+        animation: fadeUp 1s ease;
+    }
+
+    
+    .top-icon {
+        font-size: 55px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        color: white;
+        font-size: 42px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    .desc {
+        color: #d1d5db;
+        font-size: 16px;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    input {
+        width: 100%;
+        padding: 16px;
+        border: none;
+        border-radius: 16px;
+        outline: none;
+        font-size: 16px;
+        background: rgba(255,255,255,0.12);
+        color: white;
+        border: 1px solid rgba(255,255,255,0.12);
+        transition: 0.3s ease;
+    }
+
+        input::placeholder {
+            color: #cbd5e1;
+        }
+
+        input:focus {
+            border: 1px solid #c084fc;
+            box-shadow: 0 0 18px rgba(192,132,252,0.6);
+            transform: scale(1.02);
+        }
+
+    .result-box {
+        margin-top: 30px;
+        padding: 22px;
+        border-radius: 20px;
+        background: linear-gradient(135deg, rgba(168,85,247,0.25), rgba(236,72,153,0.2));
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+        .result-box h2 {
+            color: white;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+</style>

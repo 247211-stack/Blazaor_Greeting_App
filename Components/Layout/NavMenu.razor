@@ -1,0 +1,53 @@
+﻿@* Beautiful Modern NavMenu for Blazor *@
+
+<div class="top-nav">
+
+    <div class="logo">
+        🚀 My App
+    </div>
+
+    <nav class="links">
+        <a href="/">Home</a>
+        <a href="/greeting">Greeting</a>
+    </nav>
+
+</div>
+
+<style>
+
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 30px;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .links a {
+        margin-left: 18px;
+        text-decoration: none;
+        color: #cbd5e1;
+        font-weight: 500;
+        padding: 8px 12px;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+        .links a:hover {
+            background: #a855f7;
+            color: white;
+            transform: scale(1.05);
+        }
+
+</style>
