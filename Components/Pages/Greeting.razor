@@ -12,4 +12,20 @@
         <p class="desc">
             Enter your name and receive a beautiful greeting ✨
         </p>
+        <input type="text"
+               placeholder="Type your name here..."
+               @bind="UserName" />
+
+        <div class="result-box">
+            <h2>Hello, @UserName 🌸</h2>
+        </div>
+
+    </div>
+
+</div>
+
+@code {
+    string UserName = "";
+}
+
 
